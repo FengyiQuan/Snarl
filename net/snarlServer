@@ -1,0 +1,59 @@
+#!/usr/bin/python3
+import sys
+import os
+
+curPath = os.path.abspath(os.path.dirname(__file__))
+rootPath = os.path.split(curPath)[0]
+sys.path.append(os.path.split(rootPath)[0])
+import argparse
+from Snarl.src.GameState import GameState
+from Snarl.src.localSnarl import levels_parser
+
+from Snarl.src.GameManager import GameManager
+from Snarl.src.Remote.Server import Server
+
+
+def command_line():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--levels', type=str, default='snarl.levels',
+                        help="FILENAME is the name of a file containing JSON level specifications")
+    parser.add_argument('--clients', type=int, default=4,
+                        help='where 1 <= N <= 4 is the number of players')
+    parser.add_argument('--wait', type=int, default=60,
+                        help='where N is the number of seconds to wait for the next client to connect')
+    parser.add_argument('--observe', action='store_true',
+                        help='when this option is given, the server should start a local observer to display '
+                             'the progress of the game')
+    parser.add_argument('--address', type=str, default='127.0.0.1',
+                        help='IP address on which the server should listen for connections')
+    parser.add_argument('--port', type=int, default=45678,
+                        help='the port number the server will listen on')
+
+    args = parser.parse_args()
+
+    return args
+
+
+if __name__ == '__main__':
+    args = command_line()
+    path = args.levels
+    level_num, levels = levels_parser(path)
+    clients = args.clients
+    wait = args.wait
+    observe = args.observe
+    address = args.address
+    port = args.port
+
+    if level_num != len(levels):
+        print('.levels file has invalid natural and levels, given: natural ' + str(
+            level_num) + ' ,number of levels' + str(len(levels)))
+        sys.exit(1)
+
+    if not 1 <= clients <= 4:
+        print('players num: 1~4')
+        sys.exit(1)
+
+    game_manager = GameManager(state=GameState(), levels=levels, observer=observe)
+    snarl_server = Server(ip=address, port=port, max_clients=clients, reg_timeout=wait, observer=observe,
+                          manager=game_manager)
+    snarl_server.run(total_level=level_num)

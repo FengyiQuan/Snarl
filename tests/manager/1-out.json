@@ -1,0 +1,64 @@
+[
+    {"type": "State", "level": 
+    {"type": "level", "rooms": [
+    {"type": "room", "origin": [2, 2], "bounds": 
+    {"rows": 5, "columns": 5}, "layout": [[0, 0, 0, 0, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 2], [0, 1, 1, 1, 0], [0, 0, 0, 0, 0]]}, 
+    {"type": "room", "origin": [8, 8], "bounds": 
+    {"rows": 5, "columns": 5}, "layout": [[0, 0, 2, 0, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 0], [0, 0, 0, 0, 0]]}], "hallways": [
+    {"type": "hallway", "from": [4, 6], "to": [8, 10], "waypoints": [[4, 10]]}], "objects": [
+    {"type": "exit", "position": [4, 4]}, 
+    {"type": "key", "position": [10, 10]}]}, "players": [
+    {"type": "player", "name": "dio", "position": [6, 10]}], "adversaries": [
+    {"type": "zombie", "name": "", "position": [9, 10]}], "exit-locked": false}, [["dio", 
+    {"type": "player-update", "layout": [[0, 0, 0, 0, 0], [0, 0, 1, 1, 1], [0, 0, 1, 1, 1], [0, 0, 1, 1, 1], [0, 0, 0, 0, 0]], "position": [4, 3], "objects": [
+    {"type": "exit", "position": [4, 4]}], "actors": []}], ["ferd", 
+    {"type": "player-update", "layout": [[0, 1, 1, 1, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], "position": [11, 10], "objects": [
+    {"type": "key", "position": [10, 10]}], "actors": [
+    {"type": "zombie", "name": "", "position": [9, 10]}]}], ["dio", 
+    {"type": "move", "to": [4, 4]}, "OK"], ["dio", 
+    {"type": "player-update", "layout": [[0, 0, 0, 0, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 2], [0, 1, 1, 1, 0], [0, 0, 0, 0, 0]], "position": [4, 4], "objects": [], "actors": []}], ["ferd", 
+    {"type": "player-update", "layout": [[0, 1, 1, 1, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], "position": [11, 10], "objects": [
+    {"type": "key", "position": [10, 10]}], "actors": [
+    {"type": "zombie", "name": "", "position": [9, 10]}]}], ["ferd", 
+    {"type": "move", "to": [12, 10]}, "Invalid"], ["ferd", 
+    {"type": "move", "to": [10, 10]}, "Key"], ["dio", 
+    {"type": "player-update", "layout": [[0, 0, 0, 0, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 2], [0, 1, 1, 1, 0], [0, 0, 0, 0, 0]], "position": [4, 4], "objects": [], "actors": []}], ["ferd", 
+    {"type": "player-update", "layout": [[0, 0, 2, 0, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 0], [0, 0, 0, 0, 0]], "position": [10, 10], "objects": [], "actors": [
+    {"type": "zombie", "name": "", "position": [9, 10]}]}], ["dio", 
+    {"type": "move", "to": [4, 6]}, "OK"], ["dio", 
+    {"type": "player-update", "layout": [[0, 0, 0, 0, 0], [1, 1, 0, 0, 0], [1, 1, 2, 1, 1], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0]], "position": [4, 6], "objects": [
+    {"type": "exit", "position": [4, 4]}], "actors": []}], ["ferd", 
+    {"type": "player-update", "layout": [[0, 0, 2, 0, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 0], [0, 0, 0, 0, 0]], "position": [10, 10], "objects": [], "actors": [
+    {"type": "zombie", "name": "", "position": [9, 10]}]}], ["ferd", 
+    {"type": "move", "to": null}, "OK"], ["dio", 
+    {"type": "player-update", "layout": [[0, 0, 0, 0, 0], [1, 1, 0, 0, 0], [1, 1, 2, 1, 1], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0]], "position": [4, 6], "objects": [
+    {"type": "exit", "position": [4, 4]}], "actors": []}], ["ferd", 
+    {"type": "player-update", "layout": [[0, 0, 2, 0, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 0], [0, 0, 0, 0, 0]], "position": [10, 10], "objects": [], "actors": [
+    {"type": "zombie", "name": "", "position": [9, 10]}]}], ["dio", 
+    {"type": "move", "to": [4, 8]}, "OK"], ["dio", 
+    {"type": "player-update", "layout": [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [2, 1, 1, 1, 1], [0, 0, 0, 0, 1], [0, 0, 0, 0, 1]], "position": [4, 8], "objects": [], "actors": []}], ["ferd", 
+    {"type": "player-update", "layout": [[0, 0, 2, 0, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 0], [0, 0, 0, 0, 0]], "position": [10, 10], "objects": [], "actors": [
+    {"type": "zombie", "name": "", "position": [9, 10]}]}], ["ferd", 
+    {"type": "move", "to": [11, 11]}, "OK"], ["dio", 
+    {"type": "player-update", "layout": [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [2, 1, 1, 1, 1], [0, 0, 0, 0, 1], [0, 0, 0, 0, 1]], "position": [4, 8], "objects": [], "actors": []}], ["ferd", 
+    {"type": "player-update", "layout": [[1, 1, 1, 0, 0], [1, 1, 1, 0, 0], [1, 1, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], "position": [11, 11], "objects": [
+    {"type": "key", "position": [10, 10]}], "actors": [
+    {"type": "zombie", "name": "", "position": [9, 10]}]}], ["dio", 
+    {"type": "move", "to": [4, 10]}, "OK"], ["dio", 
+    {"type": "player-update", "layout": [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [1, 1, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0]], "position": [4, 10], "objects": [], "actors": []}], ["ferd", 
+    {"type": "player-update", "layout": [[1, 1, 1, 0, 0], [1, 1, 1, 0, 0], [1, 1, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], "position": [11, 11], "objects": [
+    {"type": "key", "position": [10, 10]}], "actors": [
+    {"type": "zombie", "name": "", "position": [9, 10]}]}], ["ferd", 
+    {"type": "move", "to": [9, 11]}, "OK"], ["dio", 
+    {"type": "player-update", "layout": [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [1, 1, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0]], "position": [4, 10], "objects": [], "actors": []}], ["ferd", 
+    {"type": "player-update", "layout": [[0, 1, 0, 0, 0], [0, 2, 0, 0, 0], [1, 1, 1, 0, 0], [1, 1, 1, 0, 0], [1, 1, 1, 0, 0]], "position": [9, 11], "objects": [
+    {"type": "key", "position": [10, 10]}], "actors": [
+    {"type": "zombie", "name": "", "position": [9, 10]}]}], ["dio", 
+    {"type": "move", "to": [4, 12]}, "Invalid"], ["dio", 
+    {"type": "move", "to": [6, 10]}, "OK"], ["dio", 
+    {"type": "player-update", "layout": [[1, 1, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 2, 0, 0]], "position": [6, 10], "objects": [], "actors": []}], ["ferd", 
+    {"type": "player-update", "layout": [[0, 1, 0, 0, 0], [0, 2, 0, 0, 0], [1, 1, 1, 0, 0], [1, 1, 1, 0, 0], [1, 1, 1, 0, 0]], "position": [9, 11], "objects": [
+    {"type": "key", "position": [10, 10]}], "actors": [
+    {"type": "zombie", "name": "", "position": [9, 10]}]}], ["ferd", 
+    {"type": "move", "to": [9, 10]}, "Eject"], ["dio", 
+    {"type": "player-update", "layout": [[1, 1, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 2, 0, 0]], "position": [6, 10], "objects": [], "actors": []}]]]

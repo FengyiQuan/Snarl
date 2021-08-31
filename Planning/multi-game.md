@@ -1,0 +1,4 @@
+# changes made to achieve multi-game server milestone10
+1. created new server class, `MultiServer`, which is similar to the server class except that add a field `all_scores_board`, method `__build_scores_board`, `add_scores_to_scores_board` to generate leaderboard.<br>
+2. in the `snarlServer1`, instead of call `run` server once, i called `run` on `Multiserver` class until receive text string "exit" while the game ends. When the game ends, the client socket will close as before, but the server will keep running. If other string other than "exit" typed, the server will start a new game, keep listening to connections for the next game. Player need to call `./snarlClient1` again to create a new socket to join the new game.<br>
+3. in the `IClient`, which is the abstract class for client player and client adversary, added method `receive_scores_board_message` to handle score_board message and display it at the end of the game<br>

@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+import os
+import sys
+import argparse
+
+curPath = os.path.abspath(os.path.dirname(__file__))
+rootPath = os.path.split(curPath)[0]
+sys.path.append(os.path.split(rootPath)[0])
+
+from Snarl.src.Remote.ClientPlayer import ClientPlayer
+
+def command_line():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--address', type=str, default='127.0.0.1',
+                        help='The address ip of the server')
+    parser.add_argument('--port', type=int, default=45678,
+                        help='The port number of the host')
+
+    args = parser.parse_args()
+
+    return args
+
+if __name__ == '__main__':
+    args = command_line()
+    server_address = args.address
+    server_port = args.port
+    c = ClientPlayer(server_address, server_port)
+    c.run()
